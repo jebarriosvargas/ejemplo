@@ -254,10 +254,45 @@ plot(x,dψ)
 plot (x,d2ψ)
 
 
-# In[ ]:
+# In[13]:
 
 
+widgets.IntSlider(
+    value=7,
+    min=0,
+    max=10,
+    step=1,
+    description='Test:',
+    disabled=False,
+    continuous_update=False,
+    orientation='horizontal',
+    readout=True,
+    readout_format='d'
+)
 
+
+# In[14]:
+
+
+tab_contents = ['P0', 'P1', 'P2', 'P3', 'P4']
+children = [widgets.Text(description=name) for name in tab_contents]
+tab = widgets.Tab()
+tab.children = children
+for ii in range(len(children)):
+    tab.set_title(ii, f"tab_{ii}")
+tab
+
+
+# In[15]:
+
+
+import plotly.io as pio
+import plotly.express as px
+import plotly.offline as py
+
+df = px.data.iris()
+fig = px.scatter(df, x="sepal_width", y="sepal_length", color="species", size="sepal_length")
+fig
 
 
 # In[ ]:
