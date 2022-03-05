@@ -1,5 +1,0 @@
-# archivo: _config.yml 
-title: "Libro de ejemplo"
-logo:  images/FQ-bw.png
-execute:
-  execute_notebooks: "off"
