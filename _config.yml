@@ -1,0 +1,12 @@
+# In _config.yml
+title: EjemploLibro
+author: JEBV
+logo: logo.png
+execute:
+  execute_notebooks: force
+
+parse:
+  myst_enable_extensions:
+          - amsmath
+          - dollarmath
+          - linkify
