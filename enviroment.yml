@@ -1,0 +1,24 @@
+name: jbook
+channels:
+        - conda-forge
+dependencies:
+        - python
+        - sphinx
+        - numpy
+        - pandas
+        - matplotlib
+        - scipy
+        - plotly
+        - chart-studio
+        - pip
+        - pip:
+                - jupyter-book
+                - ghp-import
+                - pythtb
+                - psutil
+                - bqplot
+                - ipyvolume
+                - ipywidgets
+                - rise
+                - seaborn
+                - RISE
