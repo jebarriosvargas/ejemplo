@@ -3,9 +3,13 @@ title: EjemploLibro
 author: JEBV
 logo: logo.png
 execute:
-  execute_notebooks: cache
+  execute_notebooks: force
 
 notebook_interface            : "notebook"
+
+launch_buttons:
+  thebe                  : true
+  colab_url: "https://colab.research.google.com"
 
 binder:
   binderhub_url               : "https://mybinder.org"
@@ -20,6 +24,7 @@ sphinx:
   config:
     html_js_files:
       - https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js
+      - https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js
 
 parse:
   myst_enable_extensions:

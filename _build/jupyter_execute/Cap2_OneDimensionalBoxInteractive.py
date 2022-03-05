@@ -292,7 +292,38 @@ import plotly.offline as py
 
 df = px.data.iris()
 fig = px.scatter(df, x="sepal_width", y="sepal_length", color="species", size="sepal_length")
-fig
+fig.show()
+
+
+# In[16]:
+
+
+import plotly.express as px
+data = px.data.iris()
+data.head()
+
+
+# In[17]:
+
+
+# Import the necessaries libraries
+import plotly.offline as pyo
+import plotly.graph_objs as go
+# Set notebook mode to work in offline
+pyo.init_notebook_mode()
+# Create traces
+trace0 = go.Scatter(
+    x=[1, 2, 3, 4],
+    y=[10, 15, 13, 17]
+)
+trace1 = go.Scatter(
+    x=[1, 2, 3, 4],
+    y=[16, 5, 11, 9]
+)
+# Fill out data with our traces
+data = [trace0, trace1]
+# Plot it and save as basic-line.html
+pyo.iplot(data, filename = 'basic-line')
 
 
 # In[ ]:
